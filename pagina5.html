@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Que Me Haces Sentir ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .poem-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poem-container::before {
+            content: '❤️';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .poem-line {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            line-height: 2;
+            color: var(--color-dark);
+            margin: 1.5rem 0;
+            opacity: 0;
+            animation: fadeInLine 1s ease forwards;
+            text-align: center;
+        }
+
+        .poem-line:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .poem-line:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .poem-line:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .poem-line:nth-child(4) {
+            animation-delay: 1.1s;
+        }
+
+        .poem-line:nth-child(5) {
+            animation-delay: 1.4s;
+        }
+
+        .poem-line:nth-child(6) {
+            animation-delay: 1.7s;
+        }
+
+        .poem-line:nth-child(7) {
+            animation-delay: 2s;
+        }
+
+        .poem-line:nth-child(8) {
+            animation-delay: 2.3s;
+        }
+
+        .poem-line:nth-child(9) {
+            animation-delay: 2.6s;
+        }
+
+        .poem-line:nth-child(10) {
+            animation-delay: 2.9s;
+        }
+
+        @keyframes fadeInLine {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .highlight {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-family: var(--font-cursive);
+            font-size: 1.6rem;
+        }
+
+        .poem-title {
+            font-family: var(--font-cursive);
+            font-size: 3rem;
+            color: var(--color-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .feeling-bubbles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .bubble {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--color-light), white);
+            border-radius: 50px;
+            color: var(--color-secondary);
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.2);
+            animation: bubbleFloat 3s ease-in-out infinite;
+        }
+
+        .bubble:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .bubble:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .bubble:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .bubble:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        .bubble:nth-child(6) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes bubbleFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Lo Que Me Haces Sentir</h1>
+
+            <div class="poem-container">
+                <h2 class="poem-title">Mis Sentimientos</h2>
+
+                <p class="poem-line">
+                    Cuando estoy contigo, el mundo <span class="highlight">desaparece</span>
+                </p>
+                <p class="poem-line">
+                    Solo existimos tú y yo, en nuestro universo perfecto
+                </p>
+                <p class="poem-line">
+                    Me haces sentir <span class="highlight">completo</span>, como si hubiera encontrado
+                </p>
+                <p class="poem-line">
+                    La pieza que le faltaba a mi corazón
+                </p>
+                <p class="poem-line">
+                    Con cada mirada, con cada sonrisa
+                </p>
+                <p class="poem-line">
+                    Me recuerdas que el <span class="highlight">amor verdadero</span> existe
+                </p>
+                <p class="poem-line">
+                    Eres mi paz en medio del caos
+                </p>
+                <p class="poem-line">
+                    Mi luz en la oscuridad
+                </p>
+                <p class="poem-line">
+                    Mi <span class="highlight">razón</span> para sonreír cada día
+                </p>
+                <p class="poem-line">
+                    Simplemente, eres mi <span class="highlight">todo</span>
+                </p>
+
+                <div class="feeling-bubbles">
+                    <span class="bubble">💖 Amado</span>
+                    <span class="bubble">🌟 Inspirado</span>
+                    <span class="bubble">😊 Feliz</span>
+                    <span class="bubble">🦋 Mariposas</span>
+                    <span class="bubble">✨ Especial</span>
+                    <span class="bubble">💫 Completo</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina4.html" class="nav-btn">← Recuerdos Especiales</a>
+                <a href="pagina6.html" class="nav-btn">Nuestro Futuro →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

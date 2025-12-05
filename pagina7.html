@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Galería ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gallery-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .instructions h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-family: var(--font-serif);
+        }
+
+        .instructions-list {
+            color: var(--color-dark);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+        }
+
+        .instructions-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .photo-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.8s ease backwards;
+            cursor: pointer;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05) rotateZ(3deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+        }
+
+        .photo-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .photo-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .photo-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .photo-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .photo-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .photo-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .photo-item:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .photo-item:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .photo-item:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: white;
+            font-size: 4rem;
+            position: relative;
+        }
+
+        .photo-placeholder::after {
+            content: 'Foto #' attr(data-number);
+            position: absolute;
+            bottom: 1rem;
+            font-size: 1.2rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Gradientes diferentes para cada foto */
+        .photo-item:nth-child(1) .photo-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .photo-item:nth-child(2) .photo-placeholder {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .photo-item:nth-child(3) .photo-placeholder {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .photo-item:nth-child(4) .photo-placeholder {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+
+        .photo-item:nth-child(5) .photo-placeholder {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        .photo-item:nth-child(6) .photo-placeholder {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+
+        .photo-item:nth-child(7) .photo-placeholder {
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+        .photo-item:nth-child(8) .photo-placeholder {
+            background: linear-gradient(135deg, #fdeb71 0%, #f8d800 100%);
+        }
+
+        .photo-item:nth-child(9) .photo-placeholder {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient"
+        style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="gallery-container">
+            <h1 class="text-center">Nuestra Galería de Momentos</h1>
+            <p class="text-center text-white cursive-text mb-4">
+                Los recuerdos más preciados, capturados para siempre
+            </p>
+
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="images/foto1.jpg" alt="Nuestro primer momento"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Nuestro primer momento juntos
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto2.jpg" alt="Tu hermosa sonrisa"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Esa sonrisa que amo tanto
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto3.jpg" alt="Día especial"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Un día que nunca olvidaré
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto4.jpg" alt="Aventura juntos"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Nuestras aventuras
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto5.jpg" alt="Momento romántico"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Juntos, simplemente felices
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto6.jpg" alt="Celebración" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Celebrando juntos
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto7.jpg" alt="Momento mágico"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Un momento mágico
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto8.jpg" alt="Mi amor y su princesa"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Las dos mujeres de mi vida
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/foto9.jpg" alt="Nuestra familia"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="photo-caption">
+                        Nuestra familia, juntos y felices
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina6.html" class="nav-btn">← Nuestro Futuro</a>
+                <a href="pagina8.html" class="nav-btn">Carta de Amor →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

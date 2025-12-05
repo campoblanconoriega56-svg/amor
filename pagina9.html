@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razones Infinitas ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .counter-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .counter-display {
+            font-family: var(--font-cursive);
+            font-size: clamp(4rem, 10vw, 8rem);
+            color: white;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin: 2rem 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .counter-label {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 300;
+        }
+
+        .reasons-scroll {
+            max-width: 900px;
+            margin: 3rem auto;
+            max-height: 600px;
+            overflow-y: auto;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .reasons-scroll::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .reasons-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .reasons-scroll::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 10px;
+        }
+
+        .reason-item {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 15px;
+            border-left: 5px solid var(--color-primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: slideInRight 0.5s ease backwards;
+            transition: transform 0.3s ease;
+        }
+
+        .reason-item:hover {
+            transform: translateX(10px);
+        }
+
+        .reason-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .reason-item:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .reason-item:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .reason-item:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+
+        .reason-item:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .reason-number {
+            display: inline-block;
+            background: var(--gradient-romantic-2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .reason-text {
+            display: inline;
+            color: var(--color-dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .stars-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+    <div class="floating-hearts"></div>
+    <div class="stars-background" id="stars"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Razones Infinitas</h1>
+
+            <div class="counter-section">
+                <p class="counter-label">Razones por las que te amo</p>
+                <div class="counter-display" id="counter">∞</div>
+                <p class="counter-label text-white" style="font-size: 1.2rem;">
+                    (Pero aquí hay algunas para empezar...)
+                </p>
+            </div>
+
+            <div class="reasons-scroll">
+                <div class="reason-item">
+                    <span class="reason-number">1</span>
+                    <span class="reason-text">Por cómo dices mi nombre, como si fuera la palabra más importante del
+                        mundo</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">2</span>
+                    <span class="reason-text">Por la forma en que me miras, con ojos llenos de amor y ternura</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">3</span>
+                    <span class="reason-text">Por tu risa contagiosa que puede alegrar cualquiera de mis días</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">4</span>
+                    <span class="reason-text">Por ser mi mejor amiga y mi amor al mismo tiempo</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">5</span>
+                    <span class="reason-text">Por apoyarme en cada sueño, sin importar qué tan loco parezca</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">6</span>
+                    <span class="reason-text">Por tu paciencia cuando estoy siendo difícil</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">7</span>
+                    <span class="reason-text">Por la manera en que cuidas de todos a tu alrededor</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">8</span>
+                    <span class="reason-text">Por tus abrazos que se sienten como volver a casa</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">9</span>
+                    <span class="reason-text">Por entender mis silencios y saber exactamente qué necesito</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">10</span>
+                    <span class="reason-text">Por bailar conmigo, incluso cuando no hay música</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">11</span>
+                    <span class="reason-text">Por hacer que los días ordinarios se sientan extraordinarios</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">12</span>
+                    <span class="reason-text">Por tu fuerza increíble que me inspira a ser mejor</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">13</span>
+                    <span class="reason-text">Por los pequeños detalles que solo tú notas sobre mí</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">14</span>
+                    <span class="reason-text">Por ser tú misma, auténtica y hermosa, siempre</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">15</span>
+                    <span class="reason-text">Por hacer que crea en el amor verdadero y en los finales felices</span>
+                </div>
+
+                <div class="reason-item">
+                    <span class="reason-number">...</span>
+                    <span class="reason-text">Y millones de razones más que descubro cada día a tu lado ❤️</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina8.html" class="nav-btn">← Carta de Amor</a>
+                <a href="pagina10.html" class="nav-btn">Mensaje Final →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script>
+        // Crear estrellas en el fondo
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.textContent = '✨';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.fontSize = (Math.random() * 0.5 + 0.5) + 'rem';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>

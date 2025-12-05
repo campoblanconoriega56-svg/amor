@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .letter-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fffef9;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            font-family: 'Georgia', serif;
+            line-height: 2;
+        }
+
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 19px,
+                    #e8505b 19px,
+                    #e8505b 21px);
+        }
+
+        .letter-paper {
+            background:
+                linear-gradient(transparent 39px, #e8505b 39px, #e8505b 41px, transparent 41px),
+                linear-gradient(90deg, transparent 39px, #ccc 39px, #ccc 41px, transparent 41px);
+            background-size: 100% 42px, 42px 100%;
+            padding: 2rem;
+        }
+
+        .letter-date {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .letter-greeting {
+            font-family: var(--font-cursive);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+        }
+
+        .letter-content {
+            color: #333;
+            font-size: 1.15rem;
+            line-height: 2.2;
+        }
+
+        .letter-content p {
+            margin-bottom: 1.5rem;
+            text-indent: 2rem;
+        }
+
+        .letter-signature {
+            margin-top: 3rem;
+            text-align: right;
+            font-family: var(--font-cursive);
+            font-size: 2rem;
+            color: var(--color-secondary);
+        }
+
+        .letter-hearts {
+            text-align: center;
+            font-size: 2rem;
+            margin: 2rem 0;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        .stamp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border: 3px dashed var(--color-primary);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transform: rotate(15deg);
+            background: rgba(255, 107, 157, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Una Carta Para Ti</h1>
+
+            <div class="letter-container">
+                <div class="stamp">💌</div>
+
+                <div class="letter-date">
+                    Hoy y siempre
+                </div>
+
+                <div class="letter-greeting">
+                    Mi amor,
+                </div>
+
+                <div class="letter-content">
+                    <p>
+                        Escribo esta carta porque las palabras habladas a veces no son suficientes para expresar
+                        todo lo que siento por ti. Quiero que tengas algo tangible, algo que puedas leer una y
+                        otra vez, para que nunca olvides cuánto significas para mí.
+                    </p>
+
+                    <p>
+                        Desde el día en que te conocí, mi vida cambió completamente. Trajiste luz a lugares
+                        oscuros de mi corazón que ni siquiera sabía que existían. Me hiciste creer en el amor
+                        verdadero, ese amor que solo se ve en las películas, pero que nunca pensé que
+                        experimentaría en la vida real.
+                    </p>
+
+                    <p>
+                        Amo todo de ti: tu sonrisa que ilumina mis días más grises, tu risa que es música para
+                        mis oídos, tu bondad que inspira a todos a tu alrededor. Amo tu fuerza cuando enfrentas
+                        desafíos, tu vulnerabilidad cuando necesitas un hombro en el cual apoyarte, y tu
+                        capacidad infinita de amar.
+                    </p>
+
+                    <p>
+                        Contigo he aprendido que el amor no es solo un sentimiento, es una decisión que tomo
+                        cada día. Es en las pequeñas cosas: en preparar tu café como te gusta, en escucharte
+                        después de un largo día, en abrazarte cuando no encuentras las palabras. Es en estar
+                        presente, en ser tu apoyo, en celebrar tus victorias y estar ahí en tus derrotas.
+                    </p>
+
+                    <p>
+                        Quiero que sepas que, sin importar lo que el futuro nos depare, estaré a tu lado.
+                        En las tormentas y en los días soleados. En los momentos de alegría y en los momentos
+                        difíciles. Porque eso es lo que significa amarte: estar contigo incondicionalmente.
+                    </p>
+
+                    <p>
+                        Gracias por elegirme cada día. Gracias por tu amor, tu paciencia, tu comprensión.
+                        Gracias por ser exactamente quien eres, porque eres perfecta para mí tal como eres.
+                    </p>
+
+                    <p>
+                        Te amo hoy, te amaré mañana, y te seguiré amando todos los días de mi vida.
+                    </p>
+                </div>
+
+                <div class="letter-hearts">
+                    ❤️ 💕 ❤️
+                </div>
+
+                <div class="letter-signature">
+                    Con todo mi amor,<br>
+                    Tu enamorado
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina7.html" class="nav-btn">← Galería de Fotos</a>
+                <a href="pagina9.html" class="nav-btn">Razones Infinitas →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

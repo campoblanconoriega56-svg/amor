@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Mi Amor ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .final-message {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .heart-animation {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .beating-heart {
+            font-size: 10rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.8));
+        }
+
+        .final-title {
+            font-family: var(--font-cursive);
+            font-size: clamp(3rem, 8vw, 5rem);
+            color: white;
+            margin: 2rem 0;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        .final-text {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: white;
+            line-height: 2;
+            margin: 2rem 0;
+            animation: fadeInUp 1.2s ease;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .emphasis {
+            font-family: var(--font-cursive);
+            font-size: 2rem;
+            color: #ffe5ec;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .circle-hearts {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 3rem auto;
+        }
+
+        .circle-heart {
+            position: absolute;
+            font-size: 2rem;
+            animation: rotateHeart 10s linear infinite;
+        }
+
+        .circle-heart:nth-child(1) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0s;
+        }
+
+        .circle-heart:nth-child(2) {
+            top: 25%;
+            right: 0;
+            animation-delay: -1.25s;
+        }
+
+        .circle-heart:nth-child(3) {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            animation-delay: -2.5s;
+        }
+
+        .circle-heart:nth-child(4) {
+            bottom: 25%;
+            right: 0;
+            animation-delay: -3.75s;
+        }
+
+        .circle-heart:nth-child(5) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: -5s;
+        }
+
+        .circle-heart:nth-child(6) {
+            bottom: 25%;
+            left: 0;
+            animation-delay: -6.25s;
+        }
+
+        .circle-heart:nth-child(7) {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation-delay: -7.5s;
+        }
+
+        .circle-heart:nth-child(8) {
+            top: 25%;
+            left: 0;
+            animation-delay: -8.75s;
+        }
+
+        @keyframes rotateHeart {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .buttons-section {
+            margin: 3rem 0;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            animation: sparkleAnimation 1s ease-out forwards;
+        }
+
+        @keyframes sparkleAnimation {
+            0% {
+                opacity: 1;
+                transform: scale(0) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(2) rotate(180deg);
+            }
+        }
+
+        .footer-note {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            color: white;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="final-message">
+            <div class="heart-animation">
+                <div class="beating-heart">❤️</div>
+            </div>
+
+            <h1 class="final-title">Para Ti, Mi Amor</h1>
+
+            <p class="final-text">
+                Hemos llegado al final de este pequeño recorrido, pero esto es solo el comienzo
+                de nuestra historia juntos.
+            </p>
+
+            <p class="final-text">
+                <span class="emphasis">Cada página de este sitio</span>
+                fue creada con amor, pensando en ti, en nosotros, y en todo lo que significas para mí.
+            </p>
+
+            <div class="circle-hearts">
+                <div class="circle-heart">💕</div>
+                <div class="circle-heart">💖</div>
+                <div class="circle-heart">💗</div>
+                <div class="circle-heart">💓</div>
+                <div class="circle-heart">💝</div>
+                <div class="circle-heart">💘</div>
+                <div class="circle-heart">💞</div>
+                <div class="circle-heart">💌</div>
+            </div>
+
+            <p class="final-text">
+                Quiero que sepas que mi amor por ti crece cada día. No hay palabras suficientes,
+                ni páginas web suficientes, ni gestos suficientes para expresar completamente
+                lo que siento por ti.
+            </p>
+
+            <p class="final-text">
+                <span class="emphasis">Eres mi todo</span>
+            </p>
+
+            <p class="final-text">
+                Mi presente, mi futuro, mi para siempre.
+            </p>
+
+            <div class="buttons-section">
+                <a href="index.html" class="btn btn-primary">
+                    ❤️ Volver al Inicio
+                </a>
+                <a href="pagina7.html" class="btn btn-secondary">
+                    📸 Ver la Galería
+                </a>
+            </div>
+
+            <div class="footer-note">
+                <p style="font-family: var(--font-cursive); font-size: 1.8rem; margin-bottom: 1rem;">
+                    Te amo más de lo que las palabras pueden expresar
+                </p>
+                <p>
+                    Guarda este sitio en tus favoritos y visítalo cada vez que necesites recordar
+                    cuánto te amo. Porque cada día, en cada momento, mi amor por ti solo crece más fuerte.
+                </p>
+                <p style="margin-top: 1.5rem; font-size: 2rem;">
+                    💑 Tú y Yo, Por Siempre 💑
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script>
+        // Crear efecto de destellos al mover el mouse
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.9) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.textContent = ['✨', '💫', '⭐', '🌟'][Math.floor(Math.random() * 4)];
+                sparkle.style.left = e.pageX + 'px';
+                sparkle.style.top = e.pageY + 'px';
+                sparkle.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>

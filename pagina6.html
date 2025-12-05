@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Futuro ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .dream-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .dream-card {
+            position: relative;
+            height: 400px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .dream-card:hover {
+            transform: scale(1.05) rotateZ(-2deg);
+        }
+
+        .dream-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .dream-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dream-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .dream-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .dream-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .dream-card:hover .dream-background {
+            transform: scale(1.1);
+        }
+
+        .dream-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            color: white;
+        }
+
+        .dream-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .dream-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .dream-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .promise-box {
+            max-width: 700px;
+            margin: 3rem auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.3);
+            border: 3px solid var(--color-light);
+        }
+
+        .promise-title {
+            font-family: var(--font-cursive);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .promise-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--color-dark);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Nuestro Futuro</h1>
+            <p class="text-center text-white cursive-text mb-4">
+                Los sueños que quiero cumplir contigo
+            </p>
+
+            <div class="dream-grid">
+                <div class="dream-card">
+                    <div class="dream-background"
+                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="dream-overlay">
+                        <div class="dream-icon">🏠</div>
+                        <h3 class="dream-title">Nuestro Hogar</h3>
+                        <p class="dream-description">
+                            Construir juntos un hogar lleno de amor, risas y recuerdos inolvidables.
+                            Un lugar donde siempre nos sintamos seguros y felices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-background"
+                        style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="dream-overlay">
+                        <div class="dream-icon">✈️</div>
+                        <h3 class="dream-title">Aventuras Juntos</h3>
+                        <p class="dream-description">
+                            Viajar por el mundo tomados de la mano, descubrir nuevos lugares,
+                            culturas y crear aventuras que recordaremos toda la vida.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-background"
+                        style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="dream-overlay">
+                        <div class="dream-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="dream-title">Nuestra Familia</h3>
+                        <p class="dream-description">
+                            Formar una hermosa familia, criar a nuestros hijos con amor,
+                            valores y darles el mejor ejemplo de lo que es el amor verdadero.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-background"
+                        style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    <div class="dream-overlay">
+                        <div class="dream-icon">👵👴</div>
+                        <h3 class="dream-title">Envejecer Juntos</h3>
+                        <p class="dream-description">
+                            Crecer viejos juntos, de la mano, recordando todas nuestras aventuras
+                            y sabiendo que cada día a tu lado fue un regalo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promise-box">
+                <h2 class="promise-title">Mi Promesa Para Ti</h2>
+                <p class="promise-text">
+                    Prometo amarte en las buenas y en las malas, en la salud y en la enfermedad.
+                    Prometo ser tu apoyo, tu compañero, tu mejor amigo. Prometo hacerte reír cada día,
+                    secar tus lágrimas cuando estés triste, y celebrar cada victoria contigo.
+                    Prometo construir contigo el futuro más hermoso que podamos imaginar.
+                    Porque tú eres mi presente, mi futuro, y mi para siempre. ❤️
+                </p>
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina5.html" class="nav-btn">← Lo Que Me Haces Sentir</a>
+                <a href="pagina7.html" class="nav-btn">Galería de Fotos →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

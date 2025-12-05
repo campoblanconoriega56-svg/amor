@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Momentos ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 55%;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: 55%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-date {
+            font-family: var(--font-cursive);
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-text {
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+            z-index: 1;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1.2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 80px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Nuestros Momentos</h1>
+            <p class="text-center text-white cursive-text mb-4">
+                El viaje de nuestro amor, paso a paso
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item" style="animation-delay: 0.1s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Primera Vez</div>
+                        <div class="timeline-title">El Día Que Te Conocí</div>
+                        <p class="timeline-text">
+                            Ese día mi vida cambió para siempre. No sabía que al conocerte,
+                            estaba conociendo a la persona con quien querría pasar el resto de mis días.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.2s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Primera Cita</div>
+                        <div class="timeline-title">Nuestro Primer Encuentro</div>
+                        <p class="timeline-text">
+                            Los nervios, las risas, la conversación que fluía como si nos conociéramos
+                            de toda la vida. Supe en ese momento que eras especial.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.3s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Primer Beso</div>
+                        <div class="timeline-title">El Momento Mágico</div>
+                        <p class="timeline-text">
+                            El tiempo se detuvo. Todo desapareció excepto tú y yo.
+                            Ese beso selló nuestro destino juntos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.4s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Primer "Te Amo"</div>
+                        <div class="timeline-title">Tres Palabras, Un Universo</div>
+                        <p class="timeline-text">
+                            Decirte "te amo" por primera vez fue liberador. Finalmente pude expresar
+                            lo que mi corazón había estado gritando desde hace tiempo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.5s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aventuras Juntos</div>
+                        <div class="timeline-title">Cada Día a Tu Lado</div>
+                        <p class="timeline-text">
+                            Desde los pequeños momentos cotidianos hasta las grandes aventuras,
+                            cada instante contigo se convierte en un recuerdo inolvidable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.6s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Hoy y Siempre</div>
+                        <div class="timeline-title">Nuestro Presente y Futuro</div>
+                        <p class="timeline-text">
+                            Cada día que pasa te amo más. Y cada día que viene, estoy emocionado
+                            de seguir construyendo nuestra historia juntos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina2.html" class="nav-btn">← Por Qué Te Amo</a>
+                <a href="pagina4.html" class="nav-btn">Recuerdos Especiales →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

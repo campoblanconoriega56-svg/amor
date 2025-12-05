@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por Qué Te Amo ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .reason-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .reason-card:hover {
+            transform: rotateY(5deg) translateY(-10px);
+        }
+
+        .reason-card:nth-child(1) {
+            animation-delay: 0.1s;
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe5ec 100%);
+        }
+
+        .reason-card:nth-child(2) {
+            animation-delay: 0.2s;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e5ecff 100%);
+        }
+
+        .reason-card:nth-child(3) {
+            animation-delay: 0.3s;
+            background: linear-gradient(135deg, #fff5fa 0%, #ffe5f5 100%);
+        }
+
+        .reason-card:nth-child(4) {
+            animation-delay: 0.4s;
+            background: linear-gradient(135deg, #fffbf5 0%, #fff0e5 100%);
+        }
+
+        .reason-card:nth-child(5) {
+            animation-delay: 0.5s;
+            background: linear-gradient(135deg, #f5fff8 0%, #e5fff0 100%);
+        }
+
+        .reason-card:nth-child(6) {
+            animation-delay: 0.6s;
+            background: linear-gradient(135deg, #fef5ff 0%, #f8e5ff 100%);
+        }
+
+        .reason-number {
+            font-size: 3rem;
+            font-family: var(--font-cursive);
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .reason-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .reason-text {
+            color: var(--color-dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Por Qué Te Amo</h1>
+            <p class="text-center text-white cursive-text mb-4">
+                Hay mil razones, pero aquí están algunas de las más especiales
+            </p>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="reason-card">
+                    <div class="reason-number">1</div>
+                    <div class="reason-title">Tu Sonrisa Ilumina Mi Mundo</div>
+                    <p class="reason-text">
+                        Cada vez que sonríes, mi día se vuelve más brillante. Tu sonrisa tiene el poder
+                        de convertir cualquier momento difícil en algo hermoso.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-number">2</div>
+                    <div class="reason-title">Tu Bondad Infinita</div>
+                    <p class="reason-text">
+                        Tienes el corazón más puro y generoso que he conocido. La manera en que cuidas
+                        de los demás y siempre buscas hacer el bien me inspira cada día.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-number">3</div>
+                    <div class="reason-title">Me Haces Mejor Persona</div>
+                    <p class="reason-text">
+                        Desde que estás en mi vida, he crecido de maneras que nunca imaginé. Me inspiras
+                        a ser mejor, a soñar más grande, y a amar más profundamente.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-number">4</div>
+                    <div class="reason-title">Tu Apoyo Incondicional</div>
+                    <p class="reason-text">
+                        Siempre estás ahí para mí, en los buenos y en los malos momentos. Saber que
+                        cuento contigo me da la fuerza para enfrentar cualquier desafío.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-number">5</div>
+                    <div class="reason-title">Eres Mi Hogar</div>
+                    <p class="reason-text">
+                        No importa dónde esté, cuando estoy contigo me siento en casa. Tu presencia
+                        es mi refugio, mi paz, mi lugar favorito en el mundo.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-number">∞</div>
+                    <div class="reason-title">Y Mil Razones Más...</div>
+                    <p class="reason-text">
+                        Podría seguir eternamente enumerando razones, porque cada día descubro algo
+                        nuevo que me enamora de ti. Eres simplemente perfecta para mí.
+                    </p>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-btn">← Inicio</a>
+                <a href="pagina3.html" class="nav-btn">Nuestros Momentos →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

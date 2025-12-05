@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuerdos Especiales ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .memory-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.8s ease backwards;
+            position: relative;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-15px) rotateZ(2deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+        }
+
+        .memory-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .memory-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .memory-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .memory-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .memory-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .memory-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .memory-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .memory-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .memory-card:hover .memory-image::before {
+            transform: translateX(100%);
+        }
+
+        .memory-content {
+            padding: 1.5rem;
+        }
+
+        .memory-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .memory-description {
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+
+        .memory-emoji {
+            font-size: 3rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-gradient" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+    <div class="floating-hearts"></div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text-center">Recuerdos Especiales</h1>
+            <p class="text-center text-white cursive-text mb-4">
+                Momentos que guardaré en mi corazón para siempre
+            </p>
+
+            <div class="memory-grid">
+                <div class="memory-card">
+                    <div class="memory-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <span class="memory-emoji">🌅</span>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Nuestro Primer Amanecer</h3>
+                        <p class="memory-description">
+                            Ver el amanecer juntos fue mágico. Tus ojos brillaban con la luz del sol
+                            y supe que quería ver mil amaneceres más a tu lado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <span class="memory-emoji">🎭</span>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Risas Hasta Llorar</h3>
+                        <p class="memory-description">
+                            Esa noche que no paramos de reír hasta que nos dolía el estómago.
+                            Tu risa es el sonido más hermoso del mundo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-image" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                        <span class="memory-emoji">🌟</span>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Bajo las Estrellas</h3>
+                        <p class="memory-description">
+                            Acostados mirando las estrellas, hablando de nuestros sueños.
+                            Ese momento de paz y conexión lo llevaré siempre conmigo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-image" style="background: linear-gradient(135deg, #fdeb71 0%, #f8d800 100%);">
+                        <span class="memory-emoji">🎵</span>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Nuestra Canción</h3>
+                        <p class="memory-description">
+                            La primera vez que bailamos juntos. Cada vez que escucho esa canción,
+                            mi corazón vuelve a latir como ese día.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-image" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
+                        <span class="memory-emoji">🍰</span>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Celebraciones Juntos</h3>
+                        <p class="memory-description">
+                            Cada cumpleaños, cada logro, cada pequeña victoria. Celebrar la vida
+                            contigo hace que todo sea más especial.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);">
+                        <span class="memory-emoji">💑</span>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Simplemente Nosotros</h3>
+                        <p class="memory-description">
+                            Los momentos simples: un abrazo en la cocina, una película en el sofá,
+                            una conversación sin fin. Esos son los que más atesoro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="pagina3.html" class="nav-btn">← Nuestros Momentos</a>
+                <a href="pagina5.html" class="nav-btn">Lo Que Me Haces Sentir →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+/* ==========================================
+   SISTEMA DE DISEÑO - SITIO ROMÁNTICO
+   ========================================== */
+
+/* Importar fuentes elegantes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ==========================================
+   VARIABLES CSS - PALETA ROMÁNTICA
+   ========================================== */
+:root {
+  /* Colores principales */
+  --color-primary: #ff6b9d;
+  --color-secondary: #c44569;
+  --color-accent: #ffa07a;
+  --color-light: #ffe5ec;
+  --color-dark: #4a1942;
+  
+  /* Gradientes románticos */
+  --gradient-romantic-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-romantic-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-romantic-3: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-romantic-4: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  --gradient-romantic-5: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --gradient-romantic-6: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 10px rgba(255, 107, 157, 0.1);
+  --shadow-md: 0 4px 20px rgba(255, 107, 157, 0.2);
+  --shadow-lg: 0 10px 40px rgba(255, 107, 157, 0.3);
+  --shadow-glow: 0 0 30px rgba(255, 107, 157, 0.5);
+  
+  /* Tipografía */
+  --font-cursive: 'Great Vibes', cursive;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ==========================================
+   RESET Y BASE
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: var(--gradient-romantic-1);
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================
+   CONTENEDORES PRINCIPALES
+   ========================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================
+   FONDOS ANIMADOS
+   ========================================== */
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: var(--gradient-romantic-1);
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.8; }
+  66% { opacity: 0.9; }
+}
+
+/* Partículas flotantes de corazones */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3);
+  animation: float-up 10s linear infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   TIPOGRAFÍA
+   ========================================== */
+h1 {
+  font-family: var(--font-cursive);
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--spacing-md);
+  animation: fadeInDown 1s ease;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: var(--spacing-sm);
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cursive-text {
+  font-family: var(--font-cursive);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* ==========================================
+   TARJETAS Y CONTENEDORES
+   ========================================== */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  animation: fadeInUp 0.8s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-glow);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient-romantic-2);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+}
+
+.nav-btn {
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  transition: all var(--transition-normal);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-arrow {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+/* ==========================================
+   ANIMACIONES
+   ========================================== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.1); }
+  20%, 40% { transform: scale(1.05); }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   GRID LAYOUTS
+   ========================================== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+/* ==========================================
+   UTILIDADES
+   ========================================== */
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-sm);
+  }
+  
+  .page-wrapper {
+    padding: var(--spacing-sm);
+  }
+  
+  .card {
+    padding: var(--spacing-sm);
+  }
+  
+  .nav-links {
+    gap: 0.5rem;
+  }
+}
